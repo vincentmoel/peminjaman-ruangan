@@ -11,8 +11,16 @@ class Room extends Model
 
     protected $guarded = ['id'];
 
+    protected $with = ['department'];
+
     public function rents()
     {
-        
+        return $this->hasMany(Rent::class);
+    }
+
+    public function department()
+    {
+        return $this->belongsTo(Department::class,'id_department');
+
     }
 }

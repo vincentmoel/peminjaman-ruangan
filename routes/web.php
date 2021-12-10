@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Guess\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+// ==== Guest Side Start ====
+Route::get('/', [HomeController::class, 'index']);
+
+// ==== Guest Side End ====
+
+
+
+// ==== Authenticate Start ====
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+Route::get('/logout', function () { return redirect('/'); });
+
+// ==== Authenticate End ====
+

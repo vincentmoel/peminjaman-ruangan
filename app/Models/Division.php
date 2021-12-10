@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Division extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
+
+    public function rents()
+    {
+        return $this->hasMany(Rent::class);
+    }
 }

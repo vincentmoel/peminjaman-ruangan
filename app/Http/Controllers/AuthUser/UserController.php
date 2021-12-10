@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
-use App\Models\Rent;
-use App\Http\Requests\StoreRentRequest;
-use App\Http\Requests\UpdateRentRequest;
 
-class RentController extends Controller
+use App\Models\User;
+use Illuminate\Http\Request;
+
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class RentController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreRentRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreRentRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class RentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Rent  $rent
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Rent $rent)
+    public function show(User $user)
     {
         //
     }
@@ -53,10 +53,10 @@ class RentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Rent  $rent
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Rent $rent)
+    public function edit(User $user)
     {
         //
     }
@@ -64,11 +64,11 @@ class RentController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateRentRequest  $request
-     * @param  \App\Models\Rent  $rent
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateRentRequest $request, Rent $rent)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -76,10 +76,10 @@ class RentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Rent  $rent
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Rent $rent)
+    public function destroy(User $user)
     {
         //
     }
