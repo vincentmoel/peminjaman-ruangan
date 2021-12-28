@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Division;
 use Illuminate\Database\Seeder;
 
 class DivisionSeeder extends Seeder
@@ -13,6 +14,16 @@ class DivisionSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Division::create([
+            'name' => 'Divisi 1'
+        ]);
+
+        Division::create([
+            'name' => 'Divisi 2'
+        ]);
+
+        Division::create([
+            'name' => 'Divisi 3'
+        ]);
     }
 }
