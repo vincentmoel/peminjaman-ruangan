@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Whoops\Handler\PlainTextHandler;
 
@@ -27,5 +28,12 @@ class AuthController extends Controller
             "user"      => $user,
             "token"     => $token
         ],200);
+    }
+
+    public function logout(Request $request)
+    {
+        // $a = Auth::user()->id;
+        dd($request);
+        return response()->json(['message' => 'success']);
     }
 }
