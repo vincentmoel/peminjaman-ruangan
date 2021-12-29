@@ -13,7 +13,7 @@ class UpdateRoomRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,10 @@ class UpdateRoomRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'code'          => 'required',
+            'department_id' => 'required',
+            'name'          => 'required',
+            'floor'         => 'required|numeric',
         ];
     }
 }
