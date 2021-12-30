@@ -23,8 +23,8 @@ class CreateRentsTable extends Migration
             $table->dateTime('until_date');
             $table->text('description');
             $table->text('note');
-            $table->string('canceled');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -36,5 +36,6 @@ class CreateRentsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('rents');
+
     }
 }

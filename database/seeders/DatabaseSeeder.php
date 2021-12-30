@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             DepartmentSeeder::class,
             DivisionSeeder::class,
             RoomSeeder::class,
+            RentSeeder::class,
         ]);
     }
 }

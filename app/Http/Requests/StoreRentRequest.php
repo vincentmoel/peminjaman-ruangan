@@ -13,7 +13,7 @@ class StoreRentRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,14 @@ class StoreRentRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'room_id'       => 'required',
+            'division_id'   => 'required',
+            'borrower_name' => 'required',
+            'phone'         => 'required',
+            'from_date'     => 'required',
+            'until_date'    => 'required',
+            'description'   => 'required',
+            'note'          => 'required'
         ];
     }
 }
