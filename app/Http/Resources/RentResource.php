@@ -23,7 +23,8 @@ class RentResource extends JsonResource
             'from_date'     => $this->from_date,
             'until_date'    => $this->until_date,
             'description'   => $this->description,
-            'note'          => $this->note
+            'note'          => $this->note,
+            // 'mssg'          => $this->messg
         ];
     }
 
