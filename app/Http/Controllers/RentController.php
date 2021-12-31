@@ -40,7 +40,8 @@ class RentController extends Controller
         {
             return response()->json([
                 'data'      => new RentCollection($isAvailable),
-                'message'   => 'schedule not available'
+                'message'   => 'failed',
+                'error'     => 'schedule not available'
             ]);
         }
         
